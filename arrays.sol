@@ -1,6 +1,6 @@
 // SPDX-License-Identifier:UNLICENSED
 
-pragma solidity 0.8.7;
+pragma solidity ^0.8.7;
 
 contract arrays {
 
@@ -29,7 +29,7 @@ contract arrays {
         return nbrX2;
     }
 
-/*    function X2(uint[] memory tab) public returns(uint[] memory){
+/*    function X2(uint[] memory tab) public pure returns(uint[] memory){
         uint len = tab.length;
         uint[] memory X2 = new uint[](len);
           for ( uint i = 0; i < tab.length; i++)
