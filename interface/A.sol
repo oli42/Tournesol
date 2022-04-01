@@ -2,24 +2,29 @@
 
 pragma solidity ^0.8.7;
 
-import './B.sol';
+// import './B.sol';
+
+interface IB {
+    function getNbr() external view returns(uint);
+    function setNbr(uint nbr) external;
+}
 
 contract A {
 
     address addB;
 
-    function setNbrB(address contractAdd) external{
+    function setNbrBfromA(address contractAdd) external{
         addB = contractAdd;
     }
 
-    function getnbrB() external view returns(uint){
-        B ptr = B(addB);
+    function getnbrBfromA() external view returns(uint){
+        IB ptr = IB(addB);
         return ptr.getNbr();
 
     }
 
-    function setNbrB(uint nbr) external{
-        B ptr = B(addB);
+    function setNbrBfromA(uint nbr) external{
+        IB ptr = IB(addB);
         ptr.setNbr(nbr);
     }
 }

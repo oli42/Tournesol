@@ -2,7 +2,7 @@
 
 pragma solidity ^0.8.7;
 
-interface interfaceB {
+interface IB {
     function getNbr() external view returns(uint);
     function setNbr(uint nbr) external;
 }
